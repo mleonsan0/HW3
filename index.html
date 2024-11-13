@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rick and Morty</title>
+  <style>
+    html, body {
+      height: 100%; /* Ensure the html and body take up full height */
+      margin: 0; /* Remove default margin */
+      padding: 0; /* Remove default padding */
+    }
+    body {
+      font-family: 'Courier New', monospace;
+      background-image: url('https://wallpapercave.com/wp/wp7227935.png');
+      background-size: cover; /* Cover the entire viewport */
+      background-position: center; /* Center the background image */
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-attachment: fixed; /* Optional: Keep the background fixed while scrolling */
+      color: white;
+      text-align: center;
+    }
+    h1 {
+      color: white;
+      text-align: center; /* Center the heading */
+      margin-top: 20px; /* Add some margin to the top */
+    }
+    #character-info {
+      margin: 20px auto; /* Center the info div */
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: rgba(51, 203, 44, 0.8); /* Semi-transparent background for readability */
+      width: 80%; /* Set a width for the info div */
+      max-width: 600px; /* Max width for larger screens */
+      border-radius: 8px; /* Rounded corners */
+      text-align: center;
+    }    
+  </style>
+</head>
+<body>
+  <h1>Rick and Morty Characters</h1>
+  <form id="character-form">
+      <label for="character-name">Enter Character Name:</label>
+        <input type="text" id="character-name" required>
+        <button type="submit">Search</button><br><br>
+  </form>
+  <form id="species-form">
+    <label for="species">Select Species:</label>
+    <select id="species" required>
+    <option value="" disabled selected>Select a species</option>
+    <option value="Human">Human</option>
+    <option value="Alien">Alien</option>
+    </select>
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="character-info"></div>
+
+  <!-- Link to the external JavaScript file -->
+  <script src="script.js"></script>
+
+</body>
+</html>
